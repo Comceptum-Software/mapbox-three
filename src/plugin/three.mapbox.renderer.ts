@@ -39,9 +39,9 @@ export class ThreeMapboxRenderer {
         const mouse = new Vector2();
         const mapTransform = this.map['transform'];
 
-        // // scale mouse pixel position to a percentage of the screen's width and height
+        // scale mouse pixel position to a percentage of the screen's width and height
         mouse.x = (point.x / mapTransform.width) * 2 - 1;
-        mouse.y = 1 - (point.y / mapTransform.height) * 2;
+        mouse.y = -(point.y / mapTransform.height) * 2 + 1;
 
         this.rayCaster.setFromCamera(mouse, this.camera);
 
