@@ -1,5 +1,5 @@
 import { Map } from "mapbox-gl";
-import { WebGLRenderer, Scene, PerspectiveCamera, Group, Raycaster } from "three";
+import { WebGLRenderer, Scene, PerspectiveCamera, Group, Raycaster, Vector2 } from "three";
 import { ThreeMapboxCamera } from "./three.mapbox.camera";
 import { ThreeMapboxObject } from "./three.mapbox.object";
 
@@ -33,6 +33,20 @@ export class ThreeMapboxRenderer {
         this.cameraSync = new ThreeMapboxCamera(this);
 
         this.scene.add(this.world);
+    }
+
+    queryRenderedFeatures(point: Vector2) {
+        const mouse = new Vector2();
+        const mapTransform = this.map['transform'];
+
+        // // scale mouse pixel position to a percentage of the screen's width and height
+        mouse.x = (point.x / mapTransform.width) * 2 - 1;
+        mouse.y = 1 - (point.y / mapTransform.height) * 2;
+
+        this.rayCaster.setFromCamera(mouse, this.camera);
+
+        // calculate objects intersecting the picking ray
+        return this.rayCaster.intersectObjects(this.world.children, true);
     }
 
     get objects() {
