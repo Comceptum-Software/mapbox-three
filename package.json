@@ -1,21 +1,21 @@
 {
   "name": "mapbox-three",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "keywords": [
     "three",
     "mapbox",
     "3d",
     "threebox"
   ],
-  "description": "A MapBox plugin for using three.js",
-  "homepage": "https://github.com/WichardRiezebos/mapbox-three",
+  "description": "Mapbox plugin for rendering 3d worlds on top of a map.",
+  "homepage": "https://github.com/Comceptum-Software/mapbox-three",
   "bugs": {
-    "url": "https://github.com/WichardRiezebos/mapbox-three/issues",
-    "email": "wichardriezebos@gmail.com"
+    "url": "https://github.com/Comceptum-Software/mapbox-three/issues",
+    "email": "wichard@comceptum.nl"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WichardRiezebos/mapbox-three.git"
+    "url": "https://github.com/Comceptum-Software/mapbox-three.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
