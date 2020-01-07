@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": true,
+        "outDir": "./dist",
+        "strict": false,
+        "lib" : ["es2015", "es2015.iterable", "dom"]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "types": [
+        "node"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "dist"
+    ],
+}
