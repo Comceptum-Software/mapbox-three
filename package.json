@@ -36,6 +36,6 @@
   },
   "dependencies": {
     "mapbox-gl": "^1.6.1",
-    "three": "^0.112.1"
+    "three": "^0.137.0"
   }
 }
